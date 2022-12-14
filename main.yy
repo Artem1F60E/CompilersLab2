@@ -34,10 +34,8 @@ C:	'a'		{printf("C -> a\n"); result = 1; }
 int yylex(void) {
 	int i;
 	i = getchar();
-	
 	while (i == ' ' || i == '\t')
 		i = getchar();
-	
 	if (i == EOF || i == '\n')
 		if (result) {
 			printf("\nSuccess\n");
